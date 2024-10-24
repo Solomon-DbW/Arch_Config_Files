@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-left": ["custom/launcher","cpu","memory", "custom/updates","custom/media","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-right": ["custom/wallpaper","network", "backlight","pulseaudio","clock", "battery","custom/power"],
 	
 	"pulseaudio": {
 		// "scroll-step": 1, // %, can be a float
