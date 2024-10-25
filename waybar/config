@@ -24,15 +24,26 @@
 		"on-click": "pavucontrol"
 
 	},
-
-	"hyprland/workspaces": {
+	
+	    "hyprland/workspaces": {
 		"persistent-workspaces": {
-                "*": 5, // 5 workspaces by default on every monitor
+		    "*": 5
 		},
-	        "format": "{icon}",
-	        "on-scroll-up": "hyprctl dispatch workspace e+1",
-	        "on-scroll-down": "hyprctl dispatch workspace e-1"
-	},
+		"format": "{name}",
+		"format-icons": {
+		    "active": "󰮯",
+		    "default": "",
+		    "empty": ""
+		},
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"all-outputs": true,
+		"sort-by-number": true,
+		"format-active": "{name}",
+		"format-occupied": "{name}",
+		"format-empty": "{name}"
+	    },
+
 	"network": {
 		"tooltip": false,
 		"format-wifi": "  {essid}",

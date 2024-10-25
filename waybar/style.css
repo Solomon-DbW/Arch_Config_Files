@@ -1,6 +1,6 @@
 * {
 	border: none;
-	border-radius: 10;
+	/* border-radius: 10; */
     font-family: "JetbrainsMono Nerd Font" ;
 	font-size: 15px;
 	min-height: 10px;
@@ -18,43 +18,48 @@ window#waybar.hidden {
 	margin-top: 6px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
 	color: transparent;
 	background: transparent;
 }
-#tags {
+#workspaces {
 	margin-top: 6px;
 	margin-left: 12px;
 	font-size: 4px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	background: #161320;
 	transition: none;
 }
 
-#tags button {
-	transition: none;
-	color: #B5E8E0;
-	background: transparent;
-	font-size: 16px;
-	border-radius: 2px;
+#workspaces button {
+    transition: none;
+    color: #B5E8E0;
+    background: transparent;
+    font-size: 16px;
 }
 
-#tags button.occupied {
-	transition: none;
-	color: #F28FAD;
-	background: transparent;
-	font-size: 4px;
+#workspaces button.active {
+    transition: none;
+    color: #F28FAD;
+    background: #302D41;  /* Added dark background */
+    font-size: 16px;      /* Changed from 4px to match other workspaces */
+    padding: 0 10px;      /* Added padding */
+    border-radius: 4px;   /* Added rounded corners */
+    border-bottom: 2px solid #F28FAD;  /* Added bottom border */
 }
 
-#tags button.focused {
-	color: #ABE9B3;
+#workspaces button.focused {
+    color: #ABE9B3;
+    background: #302D41;  /* Added dark background */
     border-top: 2px solid #ABE9B3;
     border-bottom: 2px solid #ABE9B3;
+    padding: 0 10px;      /* Added padding */
+    border-radius: 4px;   /* Added rounded corners */
 }
 
-#tags button:hover {
+#workspaces button:hover {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
@@ -63,7 +68,7 @@ window#waybar.hidden {
     color: #E8A2AF;
 }
 
-#tags button.focused:hover {
+#workspaces button.focused:hover {
     color: #E8A2AF;
 }
 
@@ -73,10 +78,12 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #bd93f9;
+	color: #bd93f9;
+	background: transparent;
+	/* text-decoration: underline; */
+	border-bottom: 4px solid;
 }
 
 #pulseaudio {
@@ -85,10 +92,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #1A1826;
-	background: #FAE3B0;
+	color: #FAE3B0;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 
 #battery {
@@ -97,20 +105,21 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #B5E8E0;
+	color: #B5E8E0;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 
 #battery.charging, #battery.plugged {
-	color: #161320;
-    background-color: #B5E8E0;
+	color: #B5E8E0;
+    background-color: transparent;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #B5E8E0;
-    color: #161320;
+    background: transparent;
+    color: #B5E8E0;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -131,10 +140,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #F8BD96;
+	color: #F8BD96;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 #clock {
 	margin-top: 6px;
@@ -142,11 +152,12 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #ABE9B3;
+	color: #ABE9B3;
+	background: transparent;
 	/*background: #1A1826;*/
+	border-bottom: 4px solid;
 }
 
 #memory {
@@ -155,10 +166,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #DDB6F2;
+	color: #DDB6F2;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 #cpu {
 	margin-top: 6px;
@@ -166,10 +178,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #96CDFB;
+	color: #96CDFB;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 
 #tray {
@@ -178,10 +191,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #B5E8E0;
-	background: #161320;
+	color: #161320;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 
 #custom-launcher {
@@ -190,10 +204,11 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 5px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
     color: #89DCEB;
-    background: #161320;
+    background: transparent;
+	border-bottom: 4px solid;
 }
 
 #custom-power {
@@ -204,10 +219,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 5px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #F28FAD;
+	color: #F28FAD;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 
 #custom-wallpaper {
@@ -216,10 +232,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
 	color: #161320;
 	background: #C9CBFF;
+	border-bottom: 4px solid;
 }
 
 #custom-updates {
@@ -228,10 +245,11 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
-	color: #161320;
-	background: #E8A2AF;
+	color: #E8A2AF;
+	background: transparent;
+	border-bottom: 4px solid;
 }
 
 #custom-media {
@@ -240,8 +258,9 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	transition: none;
 	color: #161320;
 	background: #F2CDCD;
+	border-bottom: 4px solid;
 }
