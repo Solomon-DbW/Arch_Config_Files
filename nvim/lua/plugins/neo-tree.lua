@@ -5,6 +5,8 @@ return {"nvim-neo-tree/neo-tree.nvim",
       "MunifTanjim/nui.nvim",},
   config = function()
     vim.keymap.set('n', '<leader>nt', ':Neotree<CR>') -- <CR> = Enter
+    -- Close Neotree by moving to the window and pressing 'q', ensuring that we don't close the window we're in
+    vim.keymap.set('n', '<leader>nc', ':Neotree close<CR>')
   end
     }
 
