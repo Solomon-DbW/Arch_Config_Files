@@ -1,8 +1,12 @@
+
 * {
 	border: none;
-        font-family: "JetbrainsMono Nerd Font" ;
+    font-family: "JetbrainsMono Nerd Font" ;
+    color: #000000;
+    background: transparent;
 	font-size: 15px;
 	min-height: 10px;
+    border-radius: 20px;
 }
 
 window#waybar {
@@ -19,54 +23,19 @@ window#waybar.hidden {
 	padding-right: 10px;
 	transition: none;
 	color: transparent;
-	background: transparent;
+	background-color: #00cccc;
 }
-#workspaces {
+#taskbar {
 	margin-top: 6px;
-	margin-left: 12px;
-	/* font-size: 4px; */
-	font-size: 15px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-bottom: 0px;
-	background: #161320;
 	transition: none;
-	border-radius: 20px;
+	background-color: #00cccc;
+    /* color: #ffffff; */ 
 }
 
-#workspaces button {
-    transition: none;
-    color: #B5E8E0;
-    background: transparent;
-    font-size: 16px;
-    border-radius: 20px;
-}
-
-#workspaces button.active {
-    transition: none;
-    color: #000000;
-    background: #89DCEB;
-    font-size: 16px;      /* Changed from 4px to match other workspaces */
-    padding: 0 10px;      /* Added padding */
-}
-
-#workspaces button.focused {
-    color: #ABE9B3;
-    background: #302D41;  /* Added dark background */
-    border-top: 2px solid #ABE9B3;
-    padding: 0 10px;      /* Added padding */
-}
-
-#workspaces button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #FAE3B0;
-    border-color: #E8A2AF;
-    color: #E8A2AF;
-}
-
-#workspaces button.focused:hover {
-    color: #E8A2AF;
-}
 
 #network {
 	margin-top: 6px;
@@ -75,14 +44,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	/* color: #bd93f9; */
-	color: #000000;
-	background-color: #89DCEB;
-	/* background-color: #22BBCC; */
-	border-radius: 20px;
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
-
+	background-color: #00cccc;
 }
 
 #pulseaudio {
@@ -92,12 +54,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #FAE3B0; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #battery {
@@ -107,29 +64,15 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #B5E8E0; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #battery.charging, #battery.plugged {
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #B5E8E0; */
-    /* background-color: transparent; */
+    background-color: #00cccc;
 }
 
 #battery.critical:not(.charging) {
-    /* background: transparent; */
-    /* color: #B5E8E0; */
-    color: #000000;
-    background-color: #89DCEB;
-    border-radius: 20px;
-
+    background-color: #00cccc;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -151,13 +94,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #F8BD96; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 #clock {
 	margin-top: 6px;
@@ -166,13 +103,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #ABE9B3; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #memory {
@@ -182,12 +113,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	padding-right: 10px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #DDB6F2; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 #cpu {
 	margin-top: 6px;
@@ -196,12 +122,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	padding-right: 10px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #96CDFB; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #tray {
@@ -211,12 +132,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	padding-right: 10px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #161320; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #custom-launcher {
@@ -226,12 +142,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 5px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-        /* color: #89DCEB; */
-        /* background: transparent; */
-	/* border-bottom: 4px solid; */
+    background-color: #00cccc;
 }
 
 #custom-power {
@@ -243,12 +154,7 @@ window#waybar.hidden {
 	padding-right: 5px;
 	margin-bottom: 0px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #F28FAD; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #custom-wallpaper {
@@ -258,12 +164,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #161320; */
-	/* background: #C9CBFF; */
-	/* border-bottom: 4px solid; */
+	background: #C9CBFF;
 }
 
 #custom-updates {
@@ -273,12 +174,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #E8A2AF; */
-	/* background: transparent; */
-	/* border-bottom: 4px solid; */
+	background-color: #00cccc;
 }
 
 #custom-media {
@@ -288,10 +184,5 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	color: #000000;
-	background-color: #89DCEB;
-	border-radius: 20px;
-	/* color: #161320; */
-	/* background: #F2CDCD; */
-	/* border-bottom: 4px solid; */
+	background: #F2CDCD;
 }

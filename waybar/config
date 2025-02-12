@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory", "custom/updates","custom/media","tray"],
-	"modules-center": ["hyprland/workspaces"],
+	"modules-center": ["wlr/taskbar"],
 	"modules-right": ["custom/wallpaper","network", "backlight","pulseaudio","clock", "battery","custom/power"],
 	
 	"pulseaudio": {
@@ -9,7 +9,7 @@
 		"format": "{volume}% {icon} {format_source}",
 		"format-bluetooth": "{volume}% {icon} {format_source}",
 		"format-bluetooth-muted": " {icon} {format_source}",
-		"format-muted": "0%  {format_source}",
+		"format-muted": " {format_source}",
 		"format-source": "{volume}% ",
 		"format-source-muted": "",
 		"format-icons": {
@@ -25,30 +25,19 @@
 
 	},
 	
-	    "hyprland/workspaces": {
-		"persistent-workspaces": {
-		    "*": 5
-		},
-		"format": "{name}",
-		"format-icons": {
-		    "active": "󰮯",
-		    "default": "",
-		    "empty": ""
-		},
-		"on-scroll-up": "hyprctl dispatch workspace e+1",
-		"on-scroll-down": "hyprctl dispatch workspace e-1",
-		"all-outputs": true,
-		"sort-by-number": true,
-		"format-active": "{name}",
-		"format-occupied": "{name}",
-		"format-empty": "{name}"
-	    },
-
+    "wlr/taskbar": {
+        "format": "{icon} {title:.17}",
+        "icon-size": 28,
+        "spacing": 3,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": [],
+        "on-click": "activate"
+    },
 	"network": {
 		"tooltip": false,
 		"format-wifi": "  {essid}",
-		"format-ethernet": "",
-		"on-click": "kitty -e nm-connection-editor"
+		"format-ethernet": ""
 	},
 	"backlight": {
 		"tooltip": false,
@@ -74,7 +63,7 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": "󰃭 {:%d-%m-%Y |  %H:%M}"  // Updated to show date and time
+        "format": "{:%d-%m-%Y || %H:%M}"  // Updated to show date and time
     },
     "cpu": {
         "interval": 15,
@@ -84,8 +73,7 @@
     "memory": {
         "interval": 30,
         "format": " {}%",
-        "max-length": 10,
-	"on-click": "kitty -e htop"
+        "max-length": 10
     },
     "custom/media": {
         "interval": 30,
@@ -107,15 +95,14 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "bash ~/.config/waybar/scripts/power.sh",
+        "on-click": "bash ~/.config/rofi/leave/leave.sh",
     },
     "custom/updates":{
         "format": "{} Update(s)",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
         "interval": 15,
-        "on-click": "kitty -e sudo pacman -Syu && notify-send 'The system has been updated' "
+        "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
     }
-
     
 }
