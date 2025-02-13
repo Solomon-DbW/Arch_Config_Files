@@ -2,11 +2,12 @@
 * {
 	border: none;
     font-family: "JetbrainsMono Nerd Font" ;
-    color: #000000;
-    background: transparent;
+    /* background: transparent; */
+    background-color: #000000;
 	font-size: 15px;
-	min-height: 10px;
+	min-height: 35px;
     border-radius: 20px;
+    /* margin-bottom: 6px; */
 }
 
 window#waybar {
@@ -25,15 +26,24 @@ window#waybar.hidden {
 	color: transparent;
 	background-color: #00cccc;
 }
-#taskbar {
+#taskbar {}
+
+#taskbar button {
 	margin-top: 6px;
+    margin-bottom: 6px;
+    color: #ffffff; 
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-	background-color: #00cccc;
-    /* color: #ffffff; */ 
+    /* border-radius: 0px; */
+	/* background-color: #66A9CC; */
+    background: transparent;
+}
+
+#taskbar button.active {
+    border: 3px solid rgba(119, 250, 265, 221);
 }
 
 
@@ -42,37 +52,43 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
+    color: #000000;
+    margin-bottom: 6px;
 }
 
 #pulseaudio {
 	margin-top: 6px;
+    margin-bottom: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	transition: none;
-	background-color: #00cccc;
+    color: #000000;
+	background-color: #66A9CC;
 }
 
 #battery {
 	margin-top: 6px;
+    margin-bottom: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	transition: none;
-	background-color: #00cccc;
+    color: #000000;
+	background-color: #66A9CC;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #00cccc;
+    background-color: #66A9CC;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #00cccc;
+    background-color: #66A9CC;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -92,77 +108,92 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+    color: #000000;
+	/* margin-bottom: 0px; */
+    margin-bottom: 6px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 #clock {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
+    color: #000000;
+    margin-bottom: 6px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 
 #memory {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
+    margin-bottom: 6px;
+    color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 #cpu {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
+    margin-bottom: 6px;
+    color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 
 #tray {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
+    margin-bottom: 6px;
+    color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 
 #custom-launcher {
 	font-size: 24px;
 	margin-top: 6px;
 	margin-left: 8px;
+    margin-bottom: 6px;
 	padding-left: 10px;
+    color: #000000;
 	padding-right: 5px;
 	transition: none;
-    background-color: #00cccc;
+    background-color: #66A9CC;
 }
 
 #custom-power {
 	font-size: 20px;
 	margin-top: 6px;
 	margin-left: 8px;
+    color: #000000;
 	margin-right: 8px;
 	padding-left: 10px;
 	padding-right: 5px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
+    margin-bottom: 6px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 
 #custom-wallpaper {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
+    color: #000000;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	transition: none;
 	background: #C9CBFF;
 }
@@ -172,9 +203,11 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+    color: #000000;
+	/* margin-bottom: 0px; */
+    margin-bottom: 6px;
 	transition: none;
-	background-color: #00cccc;
+	background-color: #66A9CC;
 }
 
 #custom-media {
@@ -182,7 +215,8 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
+    color: #000000;
 	transition: none;
-	background: #F2CDCD;
+	background: #66A9CC;
 }
