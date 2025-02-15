@@ -43,7 +43,8 @@ window#waybar.hidden {
 }
 
 #taskbar button.active {
-    border: 3px solid rgba(119, 250, 265, 221);
+    /* border: 3px solid rgba(119, 250, 265, 241); */
+    border: 3px solid #88cccc;
 }
 
 
