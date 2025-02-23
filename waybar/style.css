@@ -2,12 +2,10 @@
 * {
 	border: none;
     font-family: "JetbrainsMono Nerd Font" ;
-    /* background: transparent; */
     background-color: #000000;
 	font-size: 15px;
 	min-height: 35px;
     border-radius: 20px;
-    /* margin-bottom: 6px; */
 }
 
 window#waybar {
@@ -37,14 +35,15 @@ window#waybar.hidden {
 	padding-right: 10px;
 	margin-bottom: 0px;
 	transition: none;
-    /* border-radius: 0px; */
-	/* background-color: #66A9CC; */
     background: transparent;
 }
 
 #taskbar button.active {
-    /* border: 3px solid rgba(119, 250, 265, 241); */
-    border: 3px solid #88cccc;
+    border: 2px solid #88cccc;
+}
+
+#taskbar button:hover {
+    border: 1px solid #ffffff;
 }
 
 
