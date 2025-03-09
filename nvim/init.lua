@@ -1,30 +1,16 @@
-require("config.lazy")
+require('config.lazy')
 require("vim-options")
--- vim.cmd.colorscheme "one_monokai"
 
--- vim.cmd("set expandtab")
--- vim.cmd("set tabstop=4")
--- vim.cmd("set shiftwidth=2")
--- vim.cmd("set softtabstop=2")
--- vim.cmd("set autoindent")
--- vim.cmd("set smartindent")
--- vim.cmd("set relativenumber")
+-- FOR LOADING HTML IN BRAVE --
+vim.api.nvim_create_user_command('OpenInBrave', function()
+    local file = vim.fn.expand('%:p')
+    if file:match('%.html$') then
+        vim.fn.jobstart({'brave', file}, {detach = true})
+    else
+        print("Not an HTML file")
+    end
+end, {})
 
--- Telescope config
--- local builtin = require('telescope.builtin')
--- vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
--- vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
--- vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
--- vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
---
--- vim.keymap.set('n', '<leader>nt', ':Neotree<CR>') -- <CR> = Enter
+-- Keybinding: Press <leader>o to open in Brave
+vim.api.nvim_set_keymap('n', '<leader>o', ':OpenInBrave<CR>', { noremap = true, silent = true })
 
-
--- Treesitter config
--- local configs = require("nvim-treesitter.configs")
--- configs.setup({
---         ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "cpp", "rust", "python" },
---         sync_install = false,
---         highlight = { enable = true },
---         indent = { enable = true },  
---       })
