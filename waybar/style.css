@@ -43,7 +43,8 @@ window#waybar.hidden {
 }
 
 #taskbar button:hover {
-    border: 1px solid #ffffff;
+    border: 2px solid #88cccc;
+    background-color: #88cccc;
 }
 
 
