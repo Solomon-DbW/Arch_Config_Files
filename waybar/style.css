@@ -22,7 +22,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	transition: none;
 	color: transparent;
-	background-color: #00cccc;
+	/* background-color: #00cccc; */
 }
 
 #network {
@@ -32,7 +32,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
     color: #000000;
     margin-bottom: 6px;
 }
@@ -46,7 +46,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
 	transition: none;
     color: #000000;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #battery {
@@ -58,11 +58,11 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
 	transition: none;
     color: #000000;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #888888;
+    background-color: #666666;
 }
 
 #battery.critical:not(.charging) {
@@ -90,7 +90,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 #clock {
 	margin-top: 6px;
@@ -101,7 +101,7 @@ window#waybar.hidden {
     color: #000000;
     margin-bottom: 6px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #memory {
@@ -113,7 +113,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 #cpu {
 	margin-top: 6px;
@@ -124,7 +124,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #tray {
@@ -136,7 +136,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #custom-launcher {
@@ -148,7 +148,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 5px;
 	transition: none;
-    background-color: #888888;
+    background-color: #666666;
 }
 
 #custom-power {
@@ -162,7 +162,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #custom-wallpaper {
@@ -185,7 +185,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #888888;
+	background-color: #666666;
 }
 
 #custom-media {
@@ -196,5 +196,5 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     color: #000000;
 	transition: none;
-	background: #888888;
+	background: #666666;
 }
