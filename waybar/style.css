@@ -24,29 +24,6 @@ window#waybar.hidden {
 	color: transparent;
 	background-color: #00cccc;
 }
-#taskbar {}
-
-#taskbar button {
-	margin-top: 6px;
-    margin-bottom: 6px;
-    color: #ffffff; 
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	transition: none;
-    background: transparent;
-}
-
-#taskbar button.active {
-    border: 2px solid #88cccc;
-}
-
-#taskbar button:hover {
-    border: 2px solid #88cccc;
-    background-color: #88cccc;
-}
-
 
 #network {
 	margin-top: 6px;
@@ -55,7 +32,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
     color: #000000;
     margin-bottom: 6px;
 }
@@ -69,7 +46,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
 	transition: none;
     color: #000000;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #battery {
@@ -81,11 +58,11 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
 	transition: none;
     color: #000000;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #66A9CC;
+    background-color: #888888;
 }
 
 #battery.critical:not(.charging) {
@@ -113,7 +90,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 #clock {
 	margin-top: 6px;
@@ -124,7 +101,7 @@ window#waybar.hidden {
     color: #000000;
     margin-bottom: 6px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #memory {
@@ -136,7 +113,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 #cpu {
 	margin-top: 6px;
@@ -147,7 +124,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #tray {
@@ -159,7 +136,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 10px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #custom-launcher {
@@ -171,7 +148,7 @@ window#waybar.hidden {
     color: #000000;
 	padding-right: 5px;
 	transition: none;
-    background-color: #66A9CC;
+    background-color: #888888;
 }
 
 #custom-power {
@@ -185,7 +162,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #custom-wallpaper {
@@ -208,7 +185,7 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #66A9CC;
+	background-color: #888888;
 }
 
 #custom-media {
@@ -219,5 +196,5 @@ window#waybar.hidden {
 	/* margin-bottom: 0px; */
     color: #000000;
 	transition: none;
-	background: #66A9CC;
+	background: #888888;
 }
