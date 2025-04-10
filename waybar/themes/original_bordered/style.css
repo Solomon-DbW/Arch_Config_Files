@@ -21,9 +21,13 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	transition: none;
+    border-radius: 0px;
     color: #ffffff;
+    border-bottom: 2px solid #888888;
 	/* background-color: #00cccc; */
 }
+
+
 
 #network {
 	margin-top: 6px;
@@ -32,8 +36,13 @@ window#waybar.hidden {
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
 	transition: none;
-	background-color: #666666;
-    color: #000000;
+	/* background-color: #666666; */
+    /* border: 5px solid #ffffff; */
+    /* border-color: #ffffff; */
+    /* color: #000000; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
     margin-bottom: 6px;
 }
 
@@ -45,8 +54,11 @@ window#waybar.hidden {
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
 	transition: none;
-    color: #000000;
-	background-color: #666666;
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
+    /* color: #000000; */
+	/* background-color: #666666; */
 }
 
 #battery {
@@ -57,12 +69,15 @@ window#waybar.hidden {
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
 	transition: none;
-    color: #000000;
-	background-color: #666666;
+    /* color: #000000; */
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #666666;
+    background-color: #888888;
 }
 
 #battery.critical:not(.charging) {
@@ -86,11 +101,14 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-    color: #000000;
+    /* color: #000000; */
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #666666;
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 #clock {
 	margin-top: 6px;
@@ -98,10 +116,13 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
-    color: #000000;
+    /* color: #000000; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #666666;
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 
 #memory {
@@ -110,10 +131,13 @@ window#waybar.hidden {
 	padding-left: 10px;
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
-    color: #000000;
+    /* color: #000000; */
 	padding-right: 10px;
 	transition: none;
-	background-color: #666666;
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 #cpu {
 	margin-top: 6px;
@@ -121,10 +145,13 @@ window#waybar.hidden {
 	padding-left: 10px;
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
-    color: #000000;
+    /* color: #000000; */
 	padding-right: 10px;
 	transition: none;
-	background-color: #666666;
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 
 #tray {
@@ -133,10 +160,13 @@ window#waybar.hidden {
 	padding-left: 10px;
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
-    color: #000000;
+    /* color: #000000; */
 	padding-right: 10px;
 	transition: none;
-	background-color: #666666;
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 
 #custom-launcher {
@@ -145,24 +175,30 @@ window#waybar.hidden {
 	margin-left: 8px;
     margin-bottom: 6px;
 	padding-left: 10px;
-    color: #000000;
+    /* color: #000000; */
 	padding-right: 5px;
 	transition: none;
-    background-color: #666666;
+    /* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 
 #custom-power {
 	font-size: 20px;
 	margin-top: 6px;
 	margin-left: 8px;
-    color: #000000;
+    /* color: #000000; */
 	margin-right: 8px;
 	padding-left: 10px;
 	padding-right: 5px;
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #666666;
+	/* background-color: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }
 
 #custom-wallpaper {
@@ -181,11 +217,14 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-    color: #000000;
+    /* color: #000000; */
 	/* margin-bottom: 0px; */
     margin-bottom: 6px;
 	transition: none;
-	background-color: #666666;
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
+	/* background-color: #666666; */
 }
 
 #custom-media {
@@ -194,7 +233,10 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	/* margin-bottom: 0px; */
-    color: #000000;
+    /* color: #000000; */
 	transition: none;
-	background: #666666;
+	/* background: #666666; */
+	background-color: #000000;
+    border: 2px solid #888888;
+    color: #888888;
 }

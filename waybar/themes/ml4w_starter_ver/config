@@ -15,26 +15,24 @@
     "margin-right": 0,    
     "spacing": 0,
 
-    // Load Modules
-    "include": [
-        "~/.config/ml4w/settings/waybar-quicklinks.json",
-        "~/.config/waybar/themes/starter/modules.json"
-    ],
 
     // Modules Left
     "modules-left": [
-        "custom/appmenu",
-        "custom/settings",
-        //"wlr/taskbar",
-        "group/quicklinks",
+        "custom/launcher",
+        "wlr/taskbar",
         "hyprland/window",
-        "custom/starter"
     ],
 
     // Modules Center
     "modules-center": [
         "hyprland/workspaces"
     ],
+
+    "custom/launcher":{
+        "format": "Apps",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
 
     // Modules Right    
     "modules-right": [
