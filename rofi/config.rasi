@@ -1,0 +1,35 @@
+@theme "/usr/share/rofi/themes/arthur.rasi"
+
+entry {
+    color: #bbbbbb;
+}
+
+drun {
+    color: #000000;
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-text, element-icon ];
+  spacing: 5px;
+}
+
+element-text {
+    font: "JetBrainsMono 14";
+    padding: 10px;
+}
+
+element selected.normal {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: white;
+}
+
+element-icon {
+    size: 30px;
+}
+
+inputbar {
+    color: #bbbbbb;
+    background-color: #000000;
+}
