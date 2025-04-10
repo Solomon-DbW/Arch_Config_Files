@@ -77,7 +77,7 @@ window#waybar.hidden {
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #888888;
+    background-color: #000000;
 }
 
 #battery.critical:not(.charging) {
