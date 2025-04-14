@@ -1,5 +1,9 @@
 @theme "/usr/share/rofi/themes/arthur.rasi"
 
+window {
+    background-image: url("dark_arch.webp", width);
+}
+
 entry {
     color: #bbbbbb;
 }
