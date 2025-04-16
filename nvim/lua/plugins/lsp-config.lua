@@ -1,27 +1,39 @@
 return {
-    { "williamboman/mason.nvim",
-       config = function()
-           require("mason").setup()
-       end
+    {
+        "williamboman/mason.nvim",
+        lazy = false,
+        config = function()
+            require("mason").setup()
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = { "clangd", "lua_ls", "marksman", "pyright", "rust_analyzer", "html", "cssls", "ts_ls", "emmet_ls" },
-      })
-            
-        end
+        lazy = false,
+        opts = {
+            auto_install = true,
+        },
     },
     {
-      "neovim/nvim-lspconfig",
-      config = function()
-        local lspconfig = require("lspconfig")
+        "neovim/nvim-lspconfig",
+        lazy = false,
+        config = function()
+            local cmp_nvim_lsp = require("cmp_nvim_lsp")
+            local capabilities = vim.tbl_deep_extend(
+                "force",
+                {},
+                vim.lsp.protocol.make_client_capabilities(),
+                cmp_nvim_lsp.default_capabilities()
+            )
 
-        -- LSP server setup
-        lspconfig.lua_ls.setup({})
-        lspconfig.pyright.setup({})
+            local lspconfig = require("lspconfig")
 
+            lspconfig.tailwindcss.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.lua_ls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.pyright.setup({})
         -- Diagnostic virtual text setup
         vim.diagnostic.config({
           virtual_text = {
@@ -33,11 +45,12 @@ return {
           update_in_insert = false,
           severity_sort = true,
         })
-
-        -- Optional keymap
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true })
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
-        vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-      end,
-    }
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+            vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, {})
+        end,
+    },
 }
