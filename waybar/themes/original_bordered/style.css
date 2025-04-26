@@ -28,6 +28,7 @@ window#waybar.hidden {
 }
 #workspaces {
     padding: 0px 9px;
+	background-color: #000000;
     border: 2px solid #888888;
     margin-bottom: 6px;
     margin-top: 6px;
