@@ -2,8 +2,8 @@
 
 ### Keybindings
 
-#### Windows + (w)
-Change wallpaper
+Windows + (w)
+- Change wallpaper
 
 ### For Startup Sound
 
