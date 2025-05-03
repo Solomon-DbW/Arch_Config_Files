@@ -8,6 +8,14 @@ vim.cmd("set smartindent")
 vim.cmd("set relativenumber")
 vim.cmd("set splitright")
 
+-- Enable folding
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Use Treesitter
+-- vim.opt.foldenable = true
+-- vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 99
+-- vim.opt.foldcolumn = "1"
+
 
 -- FOR LOADING HTML IN BRAVE --
 vim.api.nvim_create_user_command("OpenInBrave", function()

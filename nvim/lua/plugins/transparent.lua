@@ -1,5 +1,5 @@
 return {
-    "xiyaowong/transparent.nvim",
+    -- "xiyaowong/transparent.nvim",
     -- config = function ()
     --
     -- end
