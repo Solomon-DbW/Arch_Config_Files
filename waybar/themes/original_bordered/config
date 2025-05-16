@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory", "custom/updates","custom/media","tray", "disk"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": ["custom/launch_neovim", "custom/launch_kitty","custom/launch_brave", "custom/launch_emacs"],
 	"modules-right": ["custom/wallpaper","network", "backlight","pulseaudio","clock", "battery","custom/power"],
 	
 	"pulseaudio": {
@@ -24,6 +24,23 @@
 		"on-click": "pavucontrol"
 
 	},
+    "custom/launch_neovim":{
+      "format": "",
+        "on-click": "kitty -e 'nvim'"
+    },
+    "custom/launch_kitty":{
+      "format": " ",
+        "on-click": "kitty"
+    },
+    "custom/launch_brave":{
+        "format": "󰖟 ",
+        "on-click": "brave"
+    },
+    "custom/launch_emacs": {
+        "format": "",
+        "on-click": "emacs"
+    },
+
     "disk": {
     "interval": 20,
     "format": " 󰪶 {percentage_free}% free on disk {path}",

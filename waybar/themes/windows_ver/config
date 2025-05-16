@@ -10,7 +10,9 @@
     "modules-left": [
         "custom/os_button",
         "hyprland/workspaces",
-        "wlr/taskbar"
+"custom/brave",
+ "custom/emacs",
+ "custom/kitty"
     ],
     "modules-center": [],
     "modules-right": [
@@ -25,6 +27,26 @@
         "hyprland/language",
         "clock"
     ],
+"custom/brave": {
+    "format": "󰇧",              // Icon for Brave
+    "tooltip": "Brave Browser",
+    "exec": "echo",             // Optional
+    "on-click": "brave &"
+},
+"custom/emacs": {
+    "format": "",
+    "tooltip": "Emacs",
+    "exec": "echo",
+    "on-click": "emacs &"
+},
+"custom/kitty": {
+    "format": "",
+    "tooltip": "Kitty Terminal",
+    "exec": "echo",
+    "on-click": "kitty &"
+},
+
+
     "hyprland/language": {
         "format": "{}",
         "format-en": "ENG",
@@ -37,8 +59,8 @@
         "on-scroll-down": "hyprctl dispatch workspace r-1"
     },
     "custom/os_button": {
-        "format": "",
-        "on-click": "wofi --show drun",
+        "format": "",
+        "on-click": "rofi -show drun",
         "tooltip": false
     },
     "cpu": {
@@ -70,9 +92,12 @@
         "tooltip-format": "RAM - {used:0.1f}GiB used"
     },
     "wlr/taskbar": {
-        "format": "{icon} {title:.17}",
+        "format": "{icon}",
         "icon-size": 28,
-        "spacing": 3,
+        "spacing": 0,
+	"margin": 0,   // remove margin around icons
+	"padding": 0,
+	"tooltip-format": "{title}",
         "on-click-middle": "close",
         "tooltip-format": "{title}",
         "ignore-list": [],
