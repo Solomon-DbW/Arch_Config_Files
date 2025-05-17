@@ -13,6 +13,7 @@
        :orientation "h"
        :halign "start"
        :spacing 8
+       ; :text "Workspace:"
     (for workspace in workspaces
       (button :class {workspace.current ? "current" : ""}
               :onclick "hyprctl dispatch workspace ${workspace.id}"
