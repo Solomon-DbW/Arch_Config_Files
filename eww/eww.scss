@@ -1,0 +1,80 @@
+$background: #1e1e2e;
+$foreground: #cdd6f4;
+$black: #45475a;
+$red: #f38ba8;
+$green: #a6e3a1;
+$yellow: #f9e2af;
+$blue: #89b4fa;
+$magenta: #f5c2e7;
+$cyan: #94e2d5;
+$white: #bac2de;
+
+* {
+  all: unset;
+}
+
+// Bar
+.bar {
+  background-color: $background;
+  color: $foreground;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+// Workspaces
+.workspaces {
+  background-color: $background;
+  border-radius: 10px;
+  margin: 0px 10px 0px 0px;
+  padding: 0px 8px;
+  
+  button {
+    color: $white;
+    font-size: 16px;
+    padding: 0px 5px;
+  }
+  
+  .current {
+    color: $green;
+    font-weight: bold;
+  }
+}
+
+// Clock
+.clock {
+  background-color: $background;
+  border-radius: 10px;
+  padding: 0px 12px;
+  color: $cyan;
+  font-weight: bold;
+}
+
+// System modules
+.system {
+  background-color: $background;
+  border-radius: 10px;
+  padding: 0px 10px;
+  
+  .volume-module {
+    color: $yellow;
+  }
+  
+  .brightness-module {
+    color: $yellow;
+  }
+  
+  .battery-module {
+    color: $green;
+  }
+  
+  .network-module {
+    color: $blue;
+  }
+}
+
+.separator {
+  color: $black;
+  font-size: 14px;
+  margin: 0px 5px;
+}

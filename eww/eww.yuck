@@ -1,0 +1,63 @@
+;; Variables
+(defpoll time :interval "1s" `date +"%-I:%M %p"`)
+(defpoll date :interval "1m" `date +"%A, %B %-d"`)
+(defpoll battery :interval "30s" "scripts/battery.sh")
+(defpoll volume :interval "1s" "scripts/volume.sh")
+(defpoll brightness :interval "1s" "scripts/brightness.sh")
+(defpoll network :interval "30s" "scripts/network.sh")
+(deflisten workspaces :initial "[]" "scripts/workspaces.sh")
+
+;; Widgets
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :halign "start"
+       :spacing 8
+    (for workspace in workspaces
+      (button :class {workspace.current ? "current" : ""}
+              :onclick "hyprctl dispatch workspace ${workspace.id}"
+              "${workspace.id}"))))
+
+(defwidget separator []
+  (box :class "separator" "|"))
+
+(defwidget clock []
+  (box :class "clock" :orientation "h" :space-evenly false :spacing 8
+    (label :text time)
+    (label :text date)))
+
+(defwidget system []
+  (box :class "system" :orientation "h" :space-evenly false :spacing 16
+    (box :class "volume-module" :space-evenly false :spacing 4
+      (label :text "System:")
+      (label :text volume))
+    (box :class "brightness-module" :space-evenly false :spacing 4
+      (label :text "")
+      (label :text brightness))
+    (box :class "battery-module" :space-evenly false :spacing 4
+      (label :text " ")
+      (label :text battery))
+    (box :class "network-module" :space-evenly false :spacing 4
+      (label :text " ")
+      (label :text network))))
+
+(defwidget bar []
+  (centerbox :class "bar"
+    (workspaces)
+    (clock)
+    (system)))
+
+;; Windows
+(defwindow bar
+  :monitor 0
+  :exclusive true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "30px"
+                      :anchor "top center")
+  :stacking "fg"
+  :reserve (struts :distance "30px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
+  (bar))
