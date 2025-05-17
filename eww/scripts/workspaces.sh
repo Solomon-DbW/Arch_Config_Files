@@ -44,7 +44,7 @@ def main():
     while True:
         workspaces = get_workspaces()
         print(json.dumps(workspaces), flush=True)
-        time.sleep(0.5)  # Poll every half second
+        time.sleep(0.1)  # Poll every half second
 
 if __name__ == "__main__":
     try:

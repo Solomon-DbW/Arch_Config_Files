@@ -19,8 +19,8 @@
               :onclick "hyprctl dispatch workspace ${workspace.id}"
               "${workspace.id}"))))
 
-(defwidget separator []
-  (box :class "separator" "|"))
+; (defwidget separator []
+;   (box :class "separator" "|"))
 
 (defwidget clock []
   (box :class "clock" :orientation "h" :space-evenly false :spacing 8
@@ -30,7 +30,7 @@
 (defwidget system []
   (box :class "system" :orientation "h" :space-evenly false :spacing 16
     (box :class "volume-module" :space-evenly false :spacing 4
-      (label :text "System:")
+      (label :text "  ")
       (label :text volume))
     (box :class "brightness-module" :space-evenly false :spacing 4
       (label :text "")
@@ -43,7 +43,12 @@
       (label :text network))))
 
 (defwidget bar []
-  (centerbox :class "bar"
+    ; (centerbox :class "bar"
+    ; (workspaces)
+    ; (clock)
+    ; (system))
+  (box :class "bar"
+    :spacing 250
     (workspaces)
     (clock)
     (system)))
