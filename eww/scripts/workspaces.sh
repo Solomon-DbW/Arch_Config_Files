@@ -30,13 +30,7 @@ def get_workspaces():
                 "windows": workspace_windows.get(workspace_id, 0),
                 "current": True
             })
-        else:
-            result.append({
-                "id": workspace_id,
-                "windows": workspace_windows.get(workspace_id, 0),
-                "current": False
-            })
-    
+
     
     return result
 

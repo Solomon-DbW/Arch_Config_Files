@@ -7,13 +7,11 @@
 (defpoll network :interval "30s" "scripts/network.sh")
 (deflisten workspaces :initial "[]" "scripts/workspaces.sh")
 
-;; Widgets
 (defwidget workspaces []
   (box :class "workspaces"
        :orientation "h"
        :halign "start"
        :spacing 8
-       ; :text "Workspace:"
     (for workspace in workspaces
       (button :class {workspace.current ? "current" : ""}
               :onclick "hyprctl dispatch workspace ${workspace.id}"
