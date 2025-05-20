@@ -32,56 +32,22 @@ import os
 import subprocess
 from libqtile import hook
 from libqtile.widget import backlight
-
-# from libqtile import widget
 import subprocess
-
-def get_pipewire_volume():
-    try:
-        output = subprocess.check_output(
-            "wpctl get-volume @DEFAULT_AUDIO_SINK@", shell=True
-        ).decode("utf-8").strip()
-
-        parts = output.split()
-        volume = float(parts[1]) * 100
-        muted = "MUTED" in output
-
-        vol_text = f" {int(volume)}%" if volume < 5 else f" {int(volume)}%" if volume < 50 else f" {int(volume)}%"
-        if muted:
-            vol_text = " Mute"
-        return f"Vol: {vol_text}"
-    except Exception as e:
-        return "Vol: Error"
-
-def volume_up():
-    subprocess.call("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+", shell=True)
-
-def volume_down():
-    subprocess.call("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-", shell=True)
-
-def toggle_mute():
-    subprocess.call("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle", shell=True)
-
-pipewire_volume_widget = widget.GenPollText(
-    update_interval=1,
-    func=get_pipewire_volume,
-    mouse_callbacks={
-        "Button1": toggle_mute,   # Left click
-        "Button4": volume_up,     # Scroll up
-        "Button5": volume_down,   # Scroll down
-    },
-)
+from libqtile import popup
+from libqtile.widget.base import ThreadPoolText
+import colours
+from volume import pipewire_volume_widget
+import autostart
 
 
-
-@hook.subscribe.startup_once
-def autostart():
-    home = os.path.expanduser("~")
-    subprocess.Popen(["gammastep", "-O", "2200"])
-    subprocess.Popen(
-        ["feh", "--bg-scale", f"{home}/Pictures/wallpapers/arch_syle.jpeg"]
-    )
-    subprocess.Popen(["xinput", "set-prop", "13", "libinput Tapping Enabled", "1"])
+# @hook.subscribe.startup_once
+# def autostart():
+#     home = os.path.expanduser("~")
+#     subprocess.Popen(["gammastep", "-O", "2200"])
+#     subprocess.Popen(
+#         ["feh", "--bg-scale", f"{home}/Pictures/wallpapers/arch_syle.jpeg"]
+#     )
+    # subprocess.Popen(["xinput", "set-prop", "13", "libinput Tapping Enabled", "1"])
 
 
 mod = "mod4"
@@ -244,9 +210,7 @@ screens = [
         top=bar.Bar(
             [
                 # widget.CurrentLayout(),
-
                 ## Basic Audio Indicator ##
-
                 # widget.GenPollText(
                 #     update_interval=1,
                 #     func=lambda: subprocess.check_output(
@@ -256,29 +220,42 @@ screens = [
                 #     .strip(),
                 #     name="PipeWireVolume",
                 # ),
-
                 ## New Audio Indicator ##
                 pipewire_volume_widget,
+                widget.CPU(),
+                widget.CPUGraph(),
+                widget.CheckUpdates(),
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowName(),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
+                widget.WindowName(),
+                widget.Clipboard(),
+                widget.Backlight(
+                    backlight_name="intel_backlight", format="☀ {percent:2.0%}"
+                ),
+                widget.Battery(
+                    charge_char="",
+                    discharge_char="",
+                    format="{percent:2.0%} ({hour:d}:{min:02d} left)",
+                ),
+                # widget.BatteryIcon(  ),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.Clock(format="%d/%m/%Y | %a %I:%M %p"),
                 widget.QuickExit(),
             ],
             24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            border_width=[2, 2, 2, 2],  # Draw top and bottom borders
+            border_color=[
+                "696969",
+                "696969",
+                "696969",
+                "696969",
+            ],  # Borders are magenta
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
