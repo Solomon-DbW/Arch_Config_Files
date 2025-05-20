@@ -220,7 +220,7 @@ screens = [
                 right_arrow("555555", "000000"),
                 widget.CPU(
                     background="555555",
-                    format="     {freq_current}GHz CPU Load:{load_percent}%",
+                    format="  {freq_current}GHz {load_percent}%",
                 ),
                 right_arrow("000000", "555555"),
                 widget.CPUGraph(
@@ -263,12 +263,13 @@ screens = [
                     fill_color="#555555",  # Optional: for the area under the line
                     border_color="#000000",  # Optional: border of the widget
                 ),
-                # widget.HDDGraph(
-                #     background="555555",
-                #     graph_color="#000000",
-                #     fill_color="#555555",  # Optional: for the area under the line
-                #     border_color="#000000",  # Optional: border of the widget
-                # ),
+                widget.HDDGraph(
+
+                    background="555555",
+                    graph_color="#000000",
+                    fill_color="#555555",  # Optional: for the area under the line
+                    border_color="#000000",  # Optional: border of the widget
+                ),
                 widget.QuickExit(background="555555"),
             ],
             24,
