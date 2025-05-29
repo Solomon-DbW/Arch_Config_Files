@@ -1,0 +1,352 @@
+* {
+    font-family: 'JetBrains Mono Nerd Font';
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    border: none;
+}
+
+/* Remove default styling */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+/* Base module styling */
+#custom-launcher,
+#custom-launch_neovim,
+#custom-launch_kitty,
+#custom-launch_brave,
+#custom-launch_emacs,
+#cpu,
+#memory,
+#custom-updates,
+#custom-media,
+#tray,
+#disk,
+#custom-wallpaper,
+#network,
+#backlight,
+#pulseaudio,
+#clock,
+#battery,
+#custom-power {
+    color: #ffffff;
+    padding: 0 12px;
+    margin: 0;
+    border: none;
+}
+
+/* Left modules - Blue theme */
+#custom-launcher {
+    background: #444444;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#custom-launch_neovim {
+    background: #555555;
+    color: #ffffff;
+}
+
+#custom-launch_kitty {
+    background: #666666;
+    color: #ffffff;
+}
+
+#custom-launch_brave {
+    background: #777777;
+    color: #ffffff;
+}
+
+#custom-launch_emacs {
+    background: #888888;
+    color: #ffffff;
+}
+
+/* Center modules - Green theme */
+#cpu {
+    background: #888888;
+    color: #ffffff;
+}
+
+#memory {
+    background: #777777;
+    color: #ffffff;
+}
+
+#custom-updates {
+    background: #666666;
+    color: #ffffff;
+}
+
+#tray {
+    background: #777777;
+    color: #ffffff;
+}
+
+#disk {
+    background: #333333;
+    color: #ffffff;
+}
+
+/* Right modules - Purple/Pink theme */
+/* #custom-wallpaper { */
+/*     background: #9b59b6; */
+/*     color: #ffffff; */
+/* } */
+
+#network {
+    background: #333333;
+    color: #ffffff;
+}
+
+#backlight {
+    background: #444444;
+    color: #ffffff;
+}
+
+#pulseaudio {
+    background: #555555;
+    color: #ffffff;
+}
+
+#clock {
+    background: #666666;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#battery {
+    background: #777777;
+    color: #ffffff;
+}
+
+#custom-power {
+    background: #888888;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Powerline separators styling using proper Unicode characters */
+/* Left section separators - \uE0B0 (forward arrow) */
+#custom-separator1 {
+    color: #444444;
+    background: #555555;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator2 {
+    color: #555555;
+    background: #666666;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator3 {
+    color: #666666;
+    background: #777777;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator4 {
+    color: #777777;
+    background: #888888;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator5 {
+    color: #888888;
+    background: transparent;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+/* Center section separators */
+#custom-separator6 {
+    color: #888888;
+    background: transparent;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator7 {
+    color: #888888;
+    background: #777777;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator8 {
+    color: #777777;
+    background: #666666;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator9 {
+    color: #666666;
+    background: #555555;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator10 {
+    color: #555555;
+    background: #444444;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator11 {
+    color: #444444;
+    background: #333333;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator12 {
+    color: #333333;
+    background: transparent;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+/* Right section separators - \uE0B2 (backward arrow) */
+#custom-separator13 {
+    color: #333333;
+    background: transparent;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator14 {
+    color: #333333;
+    background: transparent;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator15 {
+    color: #444444;
+    background: #333333;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator16 {
+    color: #555555;
+    background: #444444;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator17 {
+    color: #666666;
+    background: #555555;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator18 {
+    color: #777777;
+    background: #666666;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+#custom-separator19 {
+    color: #888888;
+    background: #777777;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 20px;
+}
+
+/* Special states */
+#battery.warning {
+    background: #f39c12;
+    color: #ffffff;
+}
+
+#battery.critical {
+    background: #e74c3c;
+    color: #ffffff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    to {
+        background-color: #BF616A;
+        color: #B5E8E0;
+    }
+}
+
+/* Hover effects */
+#custom-launcher:hover,
+#custom-launch_neovim:hover,
+#custom-launch_kitty:hover,
+#custom-launch_brave:hover,
+#custom-launch_emacs:hover,
+#custom-power:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Tooltip styling */
+tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+tooltip label {
+    color: #ffffff;
+}
+
+
